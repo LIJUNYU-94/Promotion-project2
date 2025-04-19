@@ -2859,6 +2859,7 @@ table .bold {
   .strengths_part h3 {
     font-size: 20px;
     text-align: center;
+      transform: translateY(0);
   }
   .strengths_part-left {
     margin-top: 0;
