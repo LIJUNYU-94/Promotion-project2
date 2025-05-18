@@ -25,7 +25,7 @@ function FAQItem({ question, answer, isOpen, onToggle }) {
         scrollTrigger: {
           trigger: question,
           start: "top 90%", // セクションがビューポートの90%位置に来たら開始
-          toggleActions: "play pause resume reset",
+          // toggleActions: "play pause resume reset",
         },
       }
     );
@@ -37,7 +37,7 @@ function FAQItem({ question, answer, isOpen, onToggle }) {
       ease: "power3.out",
       scrollTrigger: {
         trigger: answer,
-        toggleActions: "play pause resume reset",
+        // toggleActions: "play pause resume reset",
       },
     });
   }, [isOpen]);
@@ -45,7 +45,9 @@ function FAQItem({ question, answer, isOpen, onToggle }) {
     <>
       <div className="faq_container">
         <p
-          className={`faq-question ${isOpen ? "" : "faq-questionoff"}`}
+          className={`faq-question ${
+            isOpen ? "faq-questionon" : "faq-questionoff"
+          }`}
           onClick={onToggle}
           ref={questionRef}
         >

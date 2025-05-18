@@ -2206,16 +2206,16 @@ table .bold {
   transition: color 0.5s ease-in-out;
   overflow: hidden;
 }
-
+.faq-questionon::before,
 .faq-questionoff::before {
   display: none;
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 37px;
+  bottom: 5%;
+  left: 4.5%;
   width: 90%;
-  height: 55%;
-  background-color: rgb(13, 124, 188);
+  height: 45%;
+  background-color: rgba(13, 124, 188, 0.8);
   transition: transform 0.3s ease-in-out;
   transform: translateY(-100%);
   z-index: -1;
@@ -2224,6 +2224,11 @@ table .bold {
 .faq-questionoff:hover::before {
   display: block;
   transform: translateY(-27%);
+}
+.faq-questionon::before {
+  display: block;
+  transform: translateY(-27%);
+  background-color: rgba(13, 124, 188, 0.5);
 }
 .faq-questionoff:hover {
   color: rgb(255, 255, 255);
@@ -2247,7 +2252,8 @@ table .bold {
   scale: 0;
   margin-left: 64px;
   margin-bottom: 5px;
-  background-color: rgba(13, 24, 188, 0.1);
+  background-color: rgba(255, 149, 0, 0.8);
+  color: white;
   padding: 5px;
   border-radius: 5px;
   transition: all 0.3s ease-out;
